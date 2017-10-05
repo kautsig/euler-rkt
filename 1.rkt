@@ -8,10 +8,12 @@
 
 (require threading)
 
+;; Define a predicate for multiples of 3 or 5
 (define (matches? x)
   (or (= (modulo x 3) 0)
       (= (modulo x 5) 0)))
 
+;; Create a list from a stream, filter and sum up
 (~>> (in-range 1 1000)
      (stream->list)
      (filter matches?)
