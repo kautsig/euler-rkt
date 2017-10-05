@@ -20,7 +20,7 @@
         [else (+ (fib (- n 1))
                  (fib (- n 2)))]))
 
-;; Define a list if fibonacci numbers less then 4 mio
+;; Define a list with fibonacci numbers less then 4 mio
 (define fibs
   (for/list ([n (in-naturals)]
              #:break (>= (fib n) 4000000))
